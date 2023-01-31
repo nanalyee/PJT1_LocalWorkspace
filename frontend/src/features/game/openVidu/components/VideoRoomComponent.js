@@ -10,6 +10,7 @@ import OpenViduLayout from "../layout/openvidu-layout";
 import UserModel from "../models/user-model";
 import ToolbarComponent from "./toolbar/ToolbarComponent";
 import Loading from "./Loading";
+import Sidebar from "./Sidebar";
 
 var localUser = new UserModel();
 const APPLICATION_SERVER_URL =
@@ -638,9 +639,26 @@ class VideoRoomComponent extends Component {
             ))}
           </div>
           <div className="sidebar">
-            <div className="box">timer</div>
+            {/* <div className="box">timer</div>
             <div className="box">answer</div>
-            <div className="box">answer video</div>
+            <div className="box">answer video</div> */}
+            {localUser !== undefined &&
+              localUser.getStreamManager() !== undefined && (
+                <div style={chatDisplay}>
+                  <Sidebar
+                    user={localUser}
+                    chatDisplay={this.state.chatDisplay}
+                    close={this.toggleChat}
+                    messageReceived={this.checkNotification}
+                  />
+                  {/* <ChatComponent
+                    user={localUser}
+                    chatDisplay={this.state.chatDisplay}
+                    close={this.toggleChat}
+                    messageReceived={this.checkNotification}
+                  /> */}
+                </div>
+              )}
           </div>
           <div className="chattingBox">
             {localUser !== undefined &&

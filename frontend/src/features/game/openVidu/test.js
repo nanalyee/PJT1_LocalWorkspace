@@ -1,10 +1,10 @@
-// import VideoRoomComponent from "./components/VideoRoomComponent";
-import ResultComponent from "./components/ResultComponent";
+import VideoRoomComponent from "./components/VideoRoomComponent";
+// import ResultComponent from "./components/ResultComponent";
 
 function Game() {
   return (
-    <ResultComponent />
-    // <VideoRoomComponent />
+    // <ResultComponent />
+    <VideoRoomComponent />
   );
 }
 

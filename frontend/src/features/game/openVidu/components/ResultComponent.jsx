@@ -47,7 +47,7 @@ export default class ResultComponent extends Component {
         <div>
           참가자 결과 리스트 박스
           <div>
-            효과도 들어가야 합니다
+            배경에 효과도 들어가야 합니다
             {memberList[0].nickname}, {memberList[0].score}
           </div>
           <div>
