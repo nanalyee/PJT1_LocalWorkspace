@@ -33,7 +33,7 @@ const CustomMuiTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Nanum Gothic",
+    fontFamily: ["IBM Plex Sans KR"].join(","),
   },
   spacing: 8,
 });
