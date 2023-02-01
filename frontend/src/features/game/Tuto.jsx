@@ -1,34 +1,25 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import TutoCard from "../../common/card/TutoCard";
+import LargeButton from "../../common/button/LargeButton";
 
-const card = (
-  <React.Fragment>
-    <CardContent>
-      <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-        Word of the Day
-      </Typography>
-      <Typography variant="h5" component="div">
-        be
-      </Typography>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        adjective
-      </Typography>
-      <Typography variant="body2">
-        well meaning and kindly.
-        <br />
-        {'"a benevolent smile"'}
-      </Typography>
-    </CardContent>
-    <CardActions>
-      <Button size="small">Learn More</Button>
-    </CardActions>
-  </React.Fragment>
-);
+// customizing
+const sizeList = {
+  cardElevation: 12,
+  cardMargin: 80,
+  cardBorderRadiusSize: 20,
+  cardHeight: 500,
+};
 
 export default function Tuto() {
-  return <Card variant="outlined">{card}</Card>;
+  return (
+    <div>
+      <TutoCard
+        elevation={sizeList.cardElevation}
+        borderRadius={sizeList.cardBorderRadiusSize}
+        height={sizeList.cardHeight}
+        marginBottom={sizeList.cardMargin}
+      />
+      <LargeButton />
+    </div>
+  );
 }
